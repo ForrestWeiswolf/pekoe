@@ -4,8 +4,12 @@
   "description": "A test framework ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha ./**/*.spec.js"
   },
   "author": "Forrest Wolf <forrest.weiswolf@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.0.4"
+  }
 }
