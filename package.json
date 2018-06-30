@@ -2,14 +2,16 @@
   "name": "pekoe",
   "version": "1.0.0",
   "description": "A test framework ",
-  "main": "index.js",
+  "main": "build",
   "scripts": {
-    "test": "mocha ./**/*.spec.js"
+    "test": "mocha ./**/*.spec.js",
+    "build": "tsc"
   },
   "author": "Forrest Wolf <forrest.weiswolf@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "chai": "^4.1.2",
-    "mocha": "^5.0.4"
+    "mocha": "^5.0.4",
+    "typescript": "^2.7.2"
   }
 }
