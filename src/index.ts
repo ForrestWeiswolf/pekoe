@@ -8,18 +8,19 @@ export function describe(description: string, ...callbacks: Function[]){
 	console.log(results.map(r => r ? '.' : 'F').join(''))
 	console.log('Failures:')
 	failures.forEach(failure => {
-		console.log(failure)
+		console.log(description, failure.description)
+		console.log(String(failure.error))
 	})
 }
 
 export function it(description: string, callback: Function){
-	return (results: boolean[], failures: string[]) => {
+	return (results: boolean[], failures: object[]) => {
 		try {
 			callback()
 			results.push(true)
 		} catch (error) {
 			results.push(false)
-			failures.push(String(error))
+			failures.push({description, error})
 		}	
 	}
 }
