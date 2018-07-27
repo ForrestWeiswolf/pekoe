@@ -29,3 +29,5 @@ export function it(description: string, callback: Function) {
 		}
 	}
 }
+
+export default {describe, it}
